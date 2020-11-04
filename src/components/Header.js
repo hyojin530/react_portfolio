@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
+import '../css/Header.css';
 import {
   Collapse,
   Navbar,
-  NavbarToggler,
   Nav,
   NavItem,
   NavLink,
@@ -13,11 +13,6 @@ import {
 } from "reactstrap";
 
 function Header() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => setIsOpen(!isOpen);
-  const setIsClose = () => setIsOpen(false);
-
   return (
     <div id="menu">
       <Container>
@@ -26,28 +21,27 @@ function Header() {
             <Navbar light expand="md" className="nav" fixed="top">
               <Col xs={{ size: 1 }} sm={{ size: 1}} md={{ size: 1, offset : 1 }}>
                 <NavbarBrand href="">
-                  <span className="mainTitle">Hyojin</span>
+                  <span className="mainTitle">PORTFOLIO</span>
                 </NavbarBrand>
               </Col>
               <Col xs={3} sm={2} md={{ size: 1, offset: 1 }}>
-                <NavbarToggler onClick={toggle} navbar />
               </Col>
-              <Collapse isOpen={isOpen} navbar className="navbar-collapse">
+              <Collapse navbar className="navbar-collapse">
                 <Nav navbar className="navbar-ul">
                   <NavItem className="navItem">
-                    <NavLink href="#home" onClick={setIsClose}>HOME</NavLink>
+                    <NavLink href="#home">HOME</NavLink>
                   </NavItem>
                   <NavItem className="navItem">
-                    <NavLink href="#aboutme" onClick={setIsClose}>ABOUT ME</NavLink>
+                    <NavLink href="#aboutme">ABOUT ME</NavLink>
                   </NavItem>
                   <NavItem className="navItem">
-                    <NavLink href="#dev-stacks" onClick={setIsClose}>DEV STACK</NavLink>
+                    <NavLink href="#dev-stacks">DEV STACK</NavLink>
                   </NavItem>
                   <NavItem className="navItem">
-                    <NavLink href="#projects" onClick={setIsClose}>PROJECTS</NavLink>
+                    <NavLink href="#projects">PROJECTS</NavLink>
                   </NavItem>
                   <NavItem className="navItem">
-                    <NavLink href="#contact" onClick={setIsClose}>CONTACT</NavLink>
+                    <NavLink href="#contact">CONTACT</NavLink>
                   </NavItem>
                 </Nav>
               </Collapse>

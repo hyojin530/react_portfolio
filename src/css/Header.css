@@ -1,0 +1,15 @@
+.mainTitle{
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.nav {
+    background-color: #d6edc2;
+    font-weight: bold;
+    height: 90px;
+}
+
+.navItem{
+    margin-left: 30px;
+    margin-right: 50px;
+}
