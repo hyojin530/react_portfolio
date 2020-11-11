@@ -1,5 +1,6 @@
 import React from "react";
 import '../css/Header.css';
+import '../App.css';
 import {
   Collapse,
   Navbar,
@@ -19,6 +20,17 @@ function Header() {
         <Row>
           <Col xs={12} sm={12} md={12}>
             <Navbar light expand="md" className="nav" fixed="top">
+              <Collapse navbar className="navbar-collapse">
+                <Nav navbar className="navbar-ul">
+                  <NavItem className="navItem">
+                    <NavLink href="#aboutme">ABOUT ME</NavLink>
+                  </NavItem>
+                  <NavItem className="navItem">
+                    <NavLink href="#dev-stacks">STACK</NavLink>
+                  </NavItem>
+                </Nav>
+              </Collapse>
+
               <Col xs={{ size: 1 }} sm={{ size: 1}} md={{ size: 1, offset : 1 }}>
                 <NavbarBrand href="">
                   <span className="mainTitle">PORTFOLIO</span>
@@ -29,15 +41,6 @@ function Header() {
               <Collapse navbar className="navbar-collapse">
                 <Nav navbar className="navbar-ul">
                   <NavItem className="navItem">
-                    <NavLink href="#home">HOME</NavLink>
-                  </NavItem>
-                  <NavItem className="navItem">
-                    <NavLink href="#aboutme">ABOUT ME</NavLink>
-                  </NavItem>
-                  <NavItem className="navItem">
-                    <NavLink href="#dev-stacks">DEV STACK</NavLink>
-                  </NavItem>
-                  <NavItem className="navItem">
                     <NavLink href="#projects">PROJECTS</NavLink>
                   </NavItem>
                   <NavItem className="navItem">
@@ -45,6 +48,9 @@ function Header() {
                   </NavItem>
                 </Nav>
               </Collapse>
+
+
+
             </Navbar>
           </Col>
         </Row>

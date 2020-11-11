@@ -1,0 +1,60 @@
+.contact{
+    font-weight: 700;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    border: 5px solid #d6edc2;
+}
+
+.contact-text{
+    font-size: 26px;
+    color: #315200;
+    margin-bottom: 40px;
+}
+
+.contact-text:after {
+  content: "";
+  display: block;
+  width: 50px;
+  border-bottom: 2px solid #315200;
+  margin: 20px auto;
+}
+
+.gmail-button{
+    background-image: url("../img/google.PNG");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60px;
+    border: none;
+    margin: 10px;
+    width: 64px;
+    height: 64px;
+}
+
+.instagram-button{
+    background-image: url("../img/insta.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100px;
+    border: none;
+    margin: 10px;
+    width: 64px;
+    height: 64px;
+}
+
+.github-button{
+    background-image: url("../img/github.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80px 80px;
+    border: none;
+    margin: 10px;
+    width: 64px;
+    height: 64px;
+}
+
+.content{
+    margin: 10px;
+}
