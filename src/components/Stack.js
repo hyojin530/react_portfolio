@@ -1,17 +1,13 @@
 import React from 'react';
 import { VictoryAxis, VictoryBar, VictoryChart} from 'victory';
+import { Container, Row, Col } from 'reactstrap';
 import "../css/Stack.css"
 
 const CHART_WIDTH = 400;
 
 function BarChart(props) {
     return (
-        <div
-            style={{
-                width: CHART_WIDTH,
-                position: 'relative',
-                top: -20 * props.num
-            }} >
+        <div className='bars' style={{width:CHART_WIDTH, top: -20 * props.num, position:'relative', display:'inline-block'}}>
             <VictoryChart height={80} width={CHART_WIDTH}>
                 <VictoryAxis
                     dependentAxis
@@ -33,22 +29,50 @@ function BarChart(props) {
     );
 }
 
+function Category(){
+    return(
+        <div className="categorybox">
+            <p>
+                cate
+            </p>
+        </div>
+    )
+}
+
 function Stack() {
     return (
         <div className='techstack'>
             <div>
                 <p className="stack-text">TECH STACKS</p>
             </div>
-            <div className='chart'>
-                <BarChart className='bar' stack='Python' percent='75' loc={8} num={1}/>
-                <BarChart className='bar' stack='Flask' percent='60' loc={6} num={2}/>
-                <BarChart className='bar' stack='Mysql' percent='65' loc={7} num={3}/>
-                <BarChart className='bar' stack='Pytorch' percent='25' loc={9} num={4}/>
-                <BarChart className='bar' stack='Java' percent='40' loc={5} num={5}/>
-            </div>
+            <Container>
+                <Row>
+                    <Col>
+                        <div>
+                            <p className="sub-text">OVERVIEW</p>
+                        </div>
+                        <div className='chart'>
+                            <BarChart stack='Python' percent='75' loc={8} num={1} />
+                            <BarChart stack='Flask' percent='60' loc={6} num={2} />
+                            <BarChart stack='Mysql' percent='65' loc={7} num={3} />
+                            <BarChart stack='Pytorch' percent='25' loc={9} num={4} />
+                            <BarChart stack='Java' percent='40' loc={5} num={5} />
+                        </div>
+                    </Col>
+                    <Col>
+                        <div>
+                            <p className="sub-text">EXPERIENCE</p>
+                        </div>
+                        <Row xs="2">
+                            <Category />
+                            <Category />
+                            <Category />
+                            <Category />
+                        </Row>
+                    </Col>
+                </Row>
+            </Container>
         </div>
-
-
     )
 }
 
