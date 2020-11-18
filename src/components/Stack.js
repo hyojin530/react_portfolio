@@ -1,9 +1,16 @@
 import React from 'react';
 import { VictoryAxis, VictoryBar, VictoryChart} from 'victory';
 import { Container, Row, Col } from 'reactstrap';
-import "../css/Stack.css"
+import styled from 'styled-components';
+import "../css/Stack.css";
+import webimg from '../img/webfront.png';
+import serverimg from '../img/server.png';
+import aiimg from '../img/ai.png';
+import androidimg from '../img/android.png';
 
 const CHART_WIDTH = 400;
+
+const imglist = [webimg, serverimg, aiimg, androidimg];
 
 function BarChart(props) {
     return (
@@ -29,12 +36,26 @@ function BarChart(props) {
     );
 }
 
-function Category(){
+function Category(props){
+    var sectionStyle = {
+        width: "100%",
+        height: "100px",
+        backgroundImage: "url(" + props.img + ")",
+        backgroundSize: '60px',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center'
+    };
+
     return(
         <div className="categorybox">
-            <p>
-                cate
-            </p>
+            <div className="cate-name">
+                <p>{props.name}</p>
+            </div>
+            <div className="cate-img" style={sectionStyle}>
+            </div>
+            <div className="cate-detail">
+                detail
+            </div>
         </div>
     )
 }
@@ -63,11 +84,15 @@ function Stack() {
                         <div>
                             <p className="sub-text">EXPERIENCE</p>
                         </div>
-                        <Row xs="2">
-                            <Category />
-                            <Category />
-                            <Category />
-                            <Category />
+                        <Row>
+                            <Col>
+                                <Category name='Web' img={imglist[0]}/>
+                                <Category name='Data/AI' img={imglist[1]}/>
+                            </Col>
+                            <Col>
+                                <Category name='Server' img={imglist[2]}/>
+                                <Category name='Android' img={imglist[3]}/>                               
+                            </Col>
                         </Row>
                     </Col>
                 </Row>

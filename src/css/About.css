@@ -1,31 +1,20 @@
-.techstack{
+.about{
     font-weight: 700;
     padding-top: 70px;
     padding-bottom: 70px;
+    border: 5px solid #d6edc2;
 }
 
-.stack-text{
+.about-text{
     font-size: 26px;
     color: #315200;
+    margin-bottom: 40px;
 }
 
-.stack-text:after {
+.about-text:after {
   content: "";
   display: block;
   width: 50px;
   border-bottom: 2px solid #315200;
   margin: 20px auto;
-}
-
-.sub-text {
-  margin-bottom: 25px;
-}
-
-.categorybox{
-  border: 2px solid black;
-  margin-top: 20px;
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  margin-bottom: 20px
 }
