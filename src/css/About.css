@@ -18,3 +18,38 @@
   border-bottom: 2px solid #315200;
   margin: 20px auto;
 }
+
+.aboutblock{
+  padding-bottom: 20px;
+}
+
+.subtitle{
+  font-size: 18px;
+}
+
+.valuetext{
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.subtitle:after{
+  content:"";
+  display: block;
+  width: 30px;
+  border-bottom: 1px solid black;
+  margin: 5px auto
+}
+
+.intertitle{
+  margin-bottom: 5px;
+}
+
+.interntext{
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 2px;
+}
+
+.internshipidv{
+  margin-bottom: 20px;
+}

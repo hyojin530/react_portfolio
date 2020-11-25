@@ -29,3 +29,17 @@
   margin: auto;
   margin-bottom: 20px
 }
+
+.cate-nametext{
+  margin-top: 5px;
+}
+
+.cate-img{
+  margin-top: -10px;
+}
+
+.stackvalue{
+  font-size: 12px;
+  font-weight: normal;
+  margin-bottom: 2px;
+}

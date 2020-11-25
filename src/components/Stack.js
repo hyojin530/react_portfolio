@@ -12,6 +12,17 @@ const CHART_WIDTH = 400;
 
 const imglist = [webimg, serverimg, aiimg, androidimg];
 
+const stackList = [
+    { cate: 'Web', 
+      contents: ['HTML', 'Javascript', 'React.js']  },
+    { cate: 'Server',
+      contents: ['Flask', 'AWS', 'Mysql'] },
+    { cate: 'Data/AI',
+      contents: ['Pandas', 'Pytorch']},
+    { cate: 'Android',
+      contents: ['Android Studio']}
+];
+
 function BarChart(props) {
     return (
         <div className='bars' style={{width:CHART_WIDTH, top: -20 * props.num, position:'relative', display:'inline-block'}}>
@@ -49,12 +60,19 @@ function Category(props){
     return(
         <div className="categorybox">
             <div className="cate-name">
-                <p>{props.name}</p>
+                <p className='cate-nametext'>{props.name}</p>
             </div>
             <div className="cate-img" style={sectionStyle}>
             </div>
-            <div className="cate-detail">
-                detail
+            <div>
+                {stackList.map((stack) => (
+                    stack.cate === props.name &&
+                    <p>{stack.contents.map((value) => (
+                        <p class='stackvalue'>{value}</p>
+                    ))}</p>
+                ))
+
+                }
             </div>
         </div>
     )
